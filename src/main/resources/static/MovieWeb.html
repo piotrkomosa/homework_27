@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <h2>Dodawanie filmów</h2>
+</head>
+<body>
+<form  method="post" action="/save" th:object="movie">
+
+
+    <input type="text" name="title" placeholder="Tytuł">
+    <input type="date" name="premiereDate" placeholder="Data_premiery">
+    <input type="text" name="desc" placeholder="Opis">
+    <select>
+        <option value="COMEDY">COMEDY</option>
+        <option value="ANIMATED">ANIMATED</option>
+        <option value="CRIME">CRIME</option>
+        <option value="FANTASY">FANTASY</option>
+    </select>
+    <button type="submit" class="btn btn-primary">Dodaj</button>
+</form>
+</body>
+</html>
+
+
+<!--    <div class="form-row">-->
+<!--        <div class="form-group col-md-6">-->
+<!--            <label for="inputTitle">Tytuł</label>-->
+<!--            <input type="title" class="form-control" id="inputTitle">-->
+<!--        </div>-->
+<!--        <div class="form-group col-md-6">-->
+<!--            <label for="inputPassword4">Data premiery</label>-->
+<!--            <input type="date" class="" id="inputPassword4">-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--        <label for="inputAddress">Opis</label>-->
+<!--        <input type="text" class="description" id="inputAddress" >-->
+<!--    </div>-->
+<!--    <div class="form-row">-->
+<!--        <div class="form-group col-md-4">-->
+<!--            <label for="inputState">Kategoria</label>-->
+<!--            <select id="inputState" class="form-control">-->
+<!--                <option selected>Choose...</option>-->
+<!--                <option>COMEDY</option>-->
+<!--                <option>ANIMATED</option>-->
+<!--                <option>CRIME</option>-->
+<!--                <option>FANTASY</option>-->
+<!--            </select>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    </div>-->
+<!--    <button type="submit" class="btn btn-primary">Dodaj</button>-->
+<!--    </div>-->
