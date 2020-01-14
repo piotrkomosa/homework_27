@@ -1,6 +1,4 @@
-package controller;
-import Repository.MovieRepository;
-import Movie.Movie;
+package org.java.jpa_hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -37,9 +35,6 @@ EntityManager entityManager = entityManagerFactory.createEntityManager();
     }
     @GetMapping("/show")
     public String showAll(Model model) {
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        String getAll = "SELECT m FROM Movie m";
-        TypedQuery<Movie> query = entityManager.createQuery(getAll , Movie.class);
         List<Movie> allMovies = movieRepository.findAll();
         model.addAttribute("show", allMovies);
         return "All.html";

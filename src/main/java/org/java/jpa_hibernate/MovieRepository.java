@@ -1,6 +1,5 @@
-package Repository;
+package org.java.jpa_hibernate;
 
-import Movie.Movie;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

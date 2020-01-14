@@ -8,8 +8,13 @@
     <h2>Filmy</h2>
 </head>
 <body>
-<ul >
-    <li th:each="movie:${/allMovies}" th:text="|${movie.title} , ${movie.premiereDate} (${movie.desc})|">Film </li>
+<div th:if="not ${allMovies.isEmpty()}">
+<ul>
+    <li th:each="movie:${allMovies}" th:object="${movie}" th:text="|${movie.title} , ${movie.premiereDate} (${movie.desc})|">Film </li>
 </ul>
+</div>
+    <div th:if="${allMovies.isEmpty()}">
+        <h1>Nie ma filmów!!(</h1>
+    </div>
 </body>
 </html>
