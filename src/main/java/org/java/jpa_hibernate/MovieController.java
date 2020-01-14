@@ -36,7 +36,8 @@ EntityManager entityManager = entityManagerFactory.createEntityManager();
     @GetMapping("/show")
     public String showAll(Model model) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
-        TypedQuery<Movie> query = entityManager.createQuery("SELECT mov FROM Movie mov" , Movie.class);
+        String getAll = "SELECT m FROM Movie m";
+        TypedQuery<Movie> query = entityManager.createQuery(getAll , Movie.class);
         List<Movie> allMovies = movieRepository.findAll();
         model.addAttribute("show", allMovies);
         return "All.html";
