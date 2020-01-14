@@ -1,4 +1,4 @@
-package org.java.jpa_hibernate;
+package Movie;
 
 public enum Category {
 

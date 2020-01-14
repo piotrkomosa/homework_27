@@ -1,4 +1,4 @@
-package org.java.jpa_hibernate;
+package Movie;
 
 import jdk.jfr.Category;
 import org.springframework.format.annotation.DateTimeFormat;
